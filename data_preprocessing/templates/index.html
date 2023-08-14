@@ -1,0 +1,145 @@
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Model Tahmini</title>
+</head>
+<body>
+    <h1>Model Tahmini</h1>
+    <form action="/predict" method="post">
+        <table>
+            <tr>
+                <td><label for="type">Type:</label></td>
+                <td>
+                    <select id="type" name="type" required>
+                        <option value="0">H</option>
+                        <option value="1">L</option>
+                        <option value="2">M</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="air-temp">Air Temperature [K]:</label></td>
+                <td><input type="text" id="air-temp" name="air_temp" required></td>
+            </tr>
+            <tr>
+                <td><label for="process-temp">Process Temperature [K]:</label></td>
+                <td><input type="text" id="process-temp" name="process_temp" required></td>
+            </tr>
+            <tr>
+                <td><label for="rot-speed">Rotational Speed [rpm]:</label></td>
+                <td><input type="text" id="rot-speed" name="rot_speed" required></td>
+            </tr>
+            <tr>
+                <td><label for="torque">Torque [Nm]:</label></td>
+                <td><input type="text" id="torque" name="torque" required></td>
+            </tr>
+            <tr>
+                <td><label for="tool-wear">Tool Wear [min]:</label></td>
+                <td><input type="text" id="tool-wear" name="tool_wear" required></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Tahmin Et">
+    </form>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <title>Model Tahmini</title> -->
+    <style>
+        /* Styling for the container div */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set the container height to fill the viewport vertically */
+        }
+
+        /* Styling for the form container */
+        .form-container {
+            width: 20%; /* Set the width of the form container */
+            margin: 10px; /* Add some margin */
+        }
+
+        /* Styling for the table */
+        table {
+            border: 2px solid #ccc;
+            border-collapse: collapse;
+            width: 100%; /* Set the width of the table to 100% of its container */
+        }
+
+        /* Styling for table cells (td) */
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Styling for the submit button */
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%; /* Set the width of the submit button to 100% of its container */
+        }
+    </style> 
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- <h1>Model Tahmini</h1> -->
+            <form action="/predict" method="post">
+                <table>
+                    <tr>
+                        <td><label for="type">Type:</label></td>
+                        <td>
+                            <select id="type" name="type" required >
+                                <option value="0">H</option>
+                                <option value="1">L</option>
+                                <option value="2">M</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="air-temp">Air Temperature [K]:</label></td>
+                        <td><input type="number" id="air-temp" name="air_temp" required    step="0.01" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="process-temp">Process Temperature [K]:</label></td>
+                        <td><input type="number" id="process-temp" name="process_temp" required   step="0.01" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="rot-speed">Rotational Speed [rpm]:</label></td>
+                        <td><input type="number" id="rot-speed" name="rot_speed" required   step="0.01" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="torque">Torque [Nm]:</label></td>
+                        <td><input type="number" id="torque" name="torque" required  step="0.01" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tool-wear">Tool Wear [min]:</label></td>
+                        <td><input type="number" id="tool-wear" name="tool_wear" required   step="0.01" ></td>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
